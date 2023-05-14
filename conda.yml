@@ -1,0 +1,15 @@
+name: ncrystalnotebooks
+channels:
+  - nodefaults
+  - conda-forge
+dependencies:
+  - python
+  - ncrystal
+  - numpy
+  - matplotlib
+  - spglib
+  - ase
+  - gemmi
+  - jupyterlab
+  - ipympl
+#  - pymatgen #(optional)
