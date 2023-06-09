@@ -40,3 +40,7 @@ Alternatively, if you are not using conda, you can install NCrystal in [some oth
   * If your material is a solid (crystalline or amorphous), you need a phonon density of state (DOS) curve to get high-quality modelling of both inelastic and (perhaps surprisingly) elastic scattering. In this example, we go through all the steps of loading DOS curves produced by [Quantum Espresso](https://www.quantum-espresso.org/), and goes through the steps needed to clean them up a bit by removing unwanted artifacts that would otherwise prevent their usage, Finally, we use the `NCMATComposer` to combine both phonon DOS curves and crystal structures into a high quality NCMAT description of the material.
 * [Advanced4: Connecting phonon DOS curves to inelastic scattering ](notebooks/ncrystal2_advanced_04_VDOS2KNL_Connecting_phonons_to_inelastic_scattering.ipynb)
   * In this short notebook, we briefly mention the theoretical procedure used by NCrystal to expand a 1D phonon DOS curve to a 2D scattering kernel, and proceed to provide a few interactive widgets which can be used to understand this connection in practice.
+
+### Other notebooks
+
+In the [notebooks/misc/](notebooks/misc/) subdirectory we aim to provide miscellaneous notebooks with a variety of recipes, examples, and tools.
