@@ -6,20 +6,34 @@ Python notebooks with examples, documentation, and tutorials for usage of NCryst
 
 The notebooks below include output cells, so apart from a few interactive widgets you can view them directly at GitHub by clicking the links to each notebook below. However, it might be more beneficial to clone the repository and run the notebooks interactively: clearing all outputs and executing line by line to see the effect.
 
-To take full advantage of all the notebooks, you should not only have NCrystal available, but also the following Python packages:
+To take full advantage of all the notebooks, you should not only have NCrystal available, but also other Python packages. The full list is here:
 
 ```
-numpy matplotlib spglib ase gemmi jupyterlab ipympl
+ncrystal numpy matplotlib spglib ase gemmi jupyterlab ipympl
 ```
 
 ### Install dependencies via conda
 
 Everything (including NCrystal) can be installed using conda (or mamba) using the [conda.yml](conda.yml) environment file.
 
+### Install dependencies via pip
+
+Everything (including NCrystal) can be installed using pip. Here is a full example which also creates a virtual environment to keep everything nice and clean (you can of course simply run the final of the shown commands if you prefer a less sandboxed installation):
+
+```
+#create the directory and step into it:
+mkdir ./my_venv_for_ncrystal_notebooks/
+cd ./my_venv_for_ncrystal_notebooks/
+#create and activate the virtual environment:
+python3 -mvenv ./venv
+. ./venv/bin/activate
+#install the packages:
+python3 -mpip install ncrystal numpy matplotlib spglib ase gemmi jupyterlab ipympl
+```
 
 ### Other options for installing dependencies
 
-Alternatively, if you are not using conda, you can install NCrystal in [some other fashion](https://github.com/mctools/ncrystal/wiki/Get-NCrystal) and get the other dependencies via `python3 -mpip install ncrystal matplotlib ipympl numpy spglib ase gemmi jupyterlab` (it is planned to eventually support "pip install ncrystal" as well, but for the time being it is not available).
+A final option is to build NCrystal manually. Refer to [the documentation](https://github.com/mctools/ncrystal/wiki/Get-NCrystal) for details. You will most likely have to add the other dependencies in another fashion (e.g. with pip or conda, or your systems package manager.
 
 ## The notebooks
 
