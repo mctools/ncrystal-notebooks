@@ -42,11 +42,11 @@ A final option is to build NCrystal manually. Refer to [the documentation](https
 
 * [Basic1: Introduction to NCrystal and the Python API](notebooks/ncrystal1_basic_01_Introduction_and_Python_API.ipynb)
   * This is where you should start, to get a good solid foundation and learn about the basic NCrystal objects and what they provide.
-* [Basic2: NCrystal data infrastructure and standard data library](notebooks/ncrystal1_basic_02_Data_Infrastructure_and_StdDataLib.ipynb)
-  * In this notebook we will discuss the NCrystal data library of predefined materials, as well as the general infrastructure for how such data is handled.
-* [Basic3: Using NCrystal as a backend for full-fledged Monte Carlo simulations](notebooks/ncrystal1_basic_03_NCrystal_in_other_apps_and_builtin_MiniMC.ipynb)
+* [Basic2: Using NCrystal as a backend for full-fledged Monte Carlo simulations](notebooks/ncrystal1_basic_02_NCrystal_in_other_apps_and_builtin_MiniMC.ipynb)
   * Here we discuss how NCrystal can be used as a physics engine in fully fledged frameworks like McStas, OpenMC, or Geant4.
   * We also try out NCrystal's own builtin "MiniMC" framework, which can be used to model neutron scattering patterns with effects of multiple scattering and geometry.
+* [Basic3: NCrystal data infrastructure and standard data library](notebooks/ncrystal1_basic_03_Data_Infrastructure_and_StdDataLib.ipynb)
+  * In this notebook we will discuss the NCrystal data library of predefined materials, as well as the general infrastructure for how such data is handled.
 
 ### Notebooks providing more advanced information
 
