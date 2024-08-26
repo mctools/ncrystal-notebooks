@@ -1,51 +1,19 @@
 # ncrystal-notebooks
 
-Python notebooks with examples, documentation, and tutorials for usage of NCrystal.
-
-## How to use them
-
-The notebooks below include output cells, so apart from a few interactive widgets you can view them directly at GitHub by clicking the links to each notebook below. However, it might be more beneficial to clone the repository and run the notebooks interactively: clearing all outputs and executing line by line to see the effect.
-
-To take full advantage of all the notebooks, you should not only have NCrystal available, but also other Python packages. The full list is here:
-
-```
-ncrystal numpy matplotlib spglib ase gemmi jupyterlab ipympl
-```
-
-### Install dependencies via conda
-
-Everything (including NCrystal) can be installed using conda (or mamba) using the [conda.yml](conda.yml) environment file.
-
-### Install dependencies via pip
-
-Everything (including NCrystal) can be installed using pip. Here is a full example which also creates a virtual environment to keep everything nice and clean (you can of course simply run the final of the shown commands if you prefer a less sandboxed installation):
-
-```
-#create the directory and step into it:
-mkdir ./my_venv_for_ncrystal_notebooks/
-cd ./my_venv_for_ncrystal_notebooks/
-#create and activate the virtual environment:
-python3 -mvenv ./venv
-. ./venv/bin/activate
-#install the packages:
-python3 -mpip install ncrystal numpy matplotlib spglib ase gemmi jupyterlab ipympl
-```
-
-### Other options for installing dependencies
-
-A final option is to build NCrystal manually. Refer to [the documentation](https://github.com/mctools/ncrystal/wiki/Get-NCrystal) for details. You will most likely have to add the other dependencies in another fashion (e.g. with pip or conda, or your systems package manager.
+Python notebooks with examples, documentation, and tutorials for usage of NCrystal. You can either run the notebooks directly on your laptop (see below for instructions), or you can open them in google Colab by clicking the links (note: you must then click "save to Drive" before you can actually run any cells). Finally, you can also simply click the notebook links to browse them as static files directly on GitHub.
 
 ## The notebooks
 
 ### Notebooks providing a basic introduction to NCrystal
 
-* [Basic1: Introduction to NCrystal and the Python API](notebooks/ncrystal1_basic_01_Introduction_and_Python_API.ipynb)
+* [Introduction to NCrystal and the Python API](notebooks/ncrystal1_basic_01_Introduction_and_Python_API.ipynb)
+  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/ncrystal1_basic_01_Introduction_and_Python_API.ipynb">
   * This is where you should start, to get a good solid foundation and learn about the basic NCrystal objects and what they provide.
-* [Basic2: NCrystal data infrastructure and standard data library](notebooks/ncrystal1_basic_02_Data_Infrastructure_and_StdDataLib.ipynb)
+* [NCrystal data infrastructure and standard data library](notebooks/ncrystal1_basic_02_Data_Infrastructure_and_StdDataLib.ipynb)
   * In this notebook we will discuss the NCrystal data library of predefined materials, as well as the general infrastructure for how such data is handled.
-* [Basic3: Using the builtin "MiniMC" framework for generating scatter patterns](notebooks/ncrystal1_basic_03_Scatter_patterns_with_the_builtin_MiniMC_framework.ipynb)
+* [Using the builtin "MiniMC" framework for generating scatter patterns](notebooks/ncrystal1_basic_03_Scatter_patterns_with_the_builtin_MiniMC_framework.ipynb)
   * Here we discuss how to generate simple scattering patterns using the builtin "MiniMC" framework, including effects of geometry and multiple scattering.
-* [Basic4: Using NCrystal as a backend for full-fledged Monte Carlo simulations](notebooks/ncrystal1_basic_04_NCrystal_as_backend_for_third_party_apps.ipynb)
+* [Using NCrystal as a backend for full-fledged Monte Carlo simulations](notebooks/ncrystal1_basic_04_NCrystal_as_backend_for_third_party_apps.ipynb)
   * Here we discuss how NCrystal can be used as a physics engine in fully fledged frameworks like McStas, OpenMC, or Geant4.
 
 ### Notebooks providing more advanced information
@@ -62,3 +30,32 @@ A final option is to build NCrystal manually. Refer to [the documentation](https
 ### Other notebooks
 
 In the [notebooks/misc/](notebooks/misc/) subdirectory we aim to provide miscellaneous notebooks with a variety of recipes, examples, and tools.
+
+## Instructions for running these notebooks.
+
+### Browse on GitHub
+
+Just click the names of the notebooks above to get a static view of the notebooks. This is can be convenient, but offers a non-interactive view. GUI widgets are not working, and cells containing a huge amount of output are shown expanded.
+
+### Open in google Colab
+
+Clicking the google Colab links above will open the notebooks in google Colab. To actually be able to execute cells, you will need a google account and then you must click "Copy to Drive" to get your own copy in the cloud that you can edit and run. One downside is that although GUI widgets work, matplotlib plots are only shown as static images and can therefore not be resized or zoomed interactively. Apart from that, this is a convenient way to run the notebooks without the need for any local installations.
+
+### Run locally
+
+Running locally is easy since everything can be installed via `pip` or `conda`. So either create a conda environment using the [conda.yml](conda.yml) environment file, or `pip install` all the required dependencies into a dedicated Python environment by (you can of course also `pip install` into your default Python environment if you are not the careful type):
+
+```
+#create the directory and step into it:
+mkdir ./my_venv_for_ncrystal_notebooks/
+cd ./my_venv_for_ncrystal_notebooks/
+#create and activate the virtual environment:
+python3 -mvenv ./venv
+. ./venv/bin/activate
+#install the packages:
+python3 -mpip install ncrystal numpy matplotlib spglib ase gemmi jupyterlab ipympl
+```
+
+In any case, you can then download the above notebooks (individually, or just clone or download the whole ncrystal-notebooks repo) and open the notebooks via the command `jupyter-lab nameofnotebook.ipynb`.
+
+Note: although support for Windows is planned for EOY2024, it is by August 2024 still not possible to install NCrystal on Windows. So Windows users should either use the WSL, or simply run via google Colab as noted above.
