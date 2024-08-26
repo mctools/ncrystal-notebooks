@@ -27,32 +27,36 @@ Python notebooks with examples, documentation, and tutorials for usage of NCryst
   </a>
   * Here we discuss how NCrystal can be used as a physics engine in fully fledged frameworks like McStas, OpenMC, or Geant4.
 
-### Notebooks providing more advanced information
+### Notebooks related to creation of new material definitions
 
-* [Advanced1: Creating materials and the NCMATComposer](notebooks/ncrystal2_advanced_01_Creating_materials_and_the_NCMATComposer.ipynb)
+* [Creating materials and the NCMATComposer](notebooks/ncrystal2_advanced_01_Creating_materials_and_the_NCMATComposer.ipynb)
   <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/ncrystal2_advanced_01_Creating_materials_and_the_NCMATComposer.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * This is for people wishing to put together new materials, introducing the `NCMATComposer` helper class and discussing the basic ingredients needed to define a material in NCrystal.
-* [Advanced2: Importing crystal structures from CIF files or online databases](notebooks/ncrystal2_advanced_02_Import_crystal_structure_from_CIF_or_databases.ipynb)
+* [Importing crystal structures from CIF files or online databases](notebooks/ncrystal2_advanced_02_Import_crystal_structure_from_CIF_or_databases.ipynb)
   <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/ncrystal2_advanced_02_Import_crystal_structure_from_CIF_or_databases.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * If your material has a crystal structure, you most likely will need to import that crystal structure from either a CIF file or an online database. We learn how to build upon the previous `NCMATComposer` work by loading such structures from external sources.
-* [Advanced3: Adding phonon information](notebooks/ncrystal2_advanced_03_Add_phonon_info_with_PhononDOSAnalyser_with_QuantumEspresso_example.ipynb)
+* [Adding phonon information](notebooks/ncrystal2_advanced_03_Add_phonon_info_with_PhononDOSAnalyser_with_QuantumEspresso_example.ipynb)
   <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/ncrystal2_advanced_03_Add_phonon_info_with_PhononDOSAnalyser_with_QuantumEspresso_example.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * If your material is a solid (crystalline or amorphous), you need a phonon density of state (DOS) curve to get high-quality modelling of both inelastic and (perhaps surprisingly) elastic scattering. In this example, we go through all the steps of loading DOS curves produced by [Quantum Espresso](https://www.quantum-espresso.org/), and goes through the steps needed to clean them up a bit by removing unwanted artifacts that would otherwise prevent their usage, Finally, we use the `NCMATComposer` to combine both phonon DOS curves and crystal structures into a high quality NCMAT description of the material.
-* [Advanced4: Connecting phonon DOS curves to inelastic scattering ](notebooks/ncrystal2_advanced_04_VDOS2KNL_Connecting_phonons_to_inelastic_scattering.ipynb)
+
+### Miscellaneous notebooks
+
+* [Connecting phonon DOS curves to inelastic scattering ](notebooks/ncrystal2_advanced_04_VDOS2KNL_Connecting_phonons_to_inelastic_scattering.ipynb)
   <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/ncrystal2_advanced_04_VDOS2KNL_Connecting_phonons_to_inelastic_scattering.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this short notebook, we briefly mention the theoretical procedure used by NCrystal to expand a 1D phonon DOS curve to a 2D scattering kernel, and proceed to provide a few interactive widgets which can be used to understand this connection in practice.
-
-### Other notebooks
-
-In the [notebooks/misc/](notebooks/misc/) subdirectory we aim to provide miscellaneous notebooks with a variety of recipes, examples, and tools.
+* [Investigate sapphire filter](notebooks/misc/ncrystal_sapphire_filter.ipynb)
+  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/misc/ncrystal_sapphire_filter.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
+  * Notebook investigating transmission probability of a sapphire filter, and the effect of different ways of modelling.
 
 ## Instructions for running these notebooks.
 
