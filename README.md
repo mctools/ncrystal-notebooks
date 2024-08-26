@@ -8,6 +8,8 @@ Python notebooks with examples, documentation, and tutorials for usage of NCryst
 
 * [Introduction to NCrystal and the Python API](notebooks/ncrystal1_basic_01_Introduction_and_Python_API.ipynb)
   <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/ncrystal1_basic_01_Introduction_and_Python_API.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
   * This is where you should start, to get a good solid foundation and learn about the basic NCrystal objects and what they provide.
 * [NCrystal data infrastructure and standard data library](notebooks/ncrystal1_basic_02_Data_Infrastructure_and_StdDataLib.ipynb)
   * In this notebook we will discuss the NCrystal data library of predefined materials, as well as the general infrastructure for how such data is handled.
