@@ -53,7 +53,7 @@ Python notebooks with examples, documentation, and tutorials for usage of NCryst
   </a>
   * In this short notebook, we briefly mention the theoretical procedure used by NCrystal to expand a 1D phonon DOS curve to a 2D scattering kernel, and proceed to provide a few interactive widgets which can be used to understand this connection in practice.
 * [Investigate sapphire filter](notebooks/misc/ncrystal_sapphire_filter.ipynb)
-  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/misc/ncrystal_sapphire_filter.ipynb">
+  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/misc/ncrystal_sapphire_filter.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * Notebook investigating transmission probability of a sapphire filter, and the effect of different ways of modelling.
