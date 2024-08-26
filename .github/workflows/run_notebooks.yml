@@ -19,7 +19,7 @@ jobs:
            #"allow-prereleases: true" below.
           - { os: ubuntu-latest, python: '3.10' }
           - { os: ubuntu-latest, python: '3.11' }
-          - { os: ubuntu-latest, python: '3.13' }
+          #Too slow, still requires too many wheels to be built - { os: ubuntu-latest, python: '3.13' }
           - { os: macos-latest,  python: "3.12" }
     name: ${{ matrix.os }}.${{ matrix.CC }}.python-${{ matrix.python }}
     runs-on: ${{ matrix.os }}
