@@ -43,7 +43,7 @@ A final option is to build NCrystal manually. Refer to [the documentation](https
   * This is where you should start, to get a good solid foundation and learn about the basic NCrystal objects and what they provide.
 * [Basic2: NCrystal data infrastructure and standard data library](notebooks/ncrystal1_basic_02_Data_Infrastructure_and_StdDataLib.ipynb)
   * In this notebook we will discuss the NCrystal data library of predefined materials, as well as the general infrastructure for how such data is handled.
-* [Basic3: NCrystal data infrastructure and standard data library](notebooks/ncrystal1_basic_03_Scatter_patterns_with_the_builtin_MiniMC_framework.ipynb)
+* [Basic3: Using the builtin "MiniMC" framework for generating scatter patterns](notebooks/ncrystal1_basic_03_Scatter_patterns_with_the_builtin_MiniMC_framework.ipynb)
   * Here we discuss how to generate simple scattering patterns using the builtin "MiniMC" framework, including effects of geometry and multiple scattering.
 * [Basic4: Using NCrystal as a backend for full-fledged Monte Carlo simulations](notebooks/ncrystal1_basic_04_NCrystal_as_backend_for_third_party_apps.ipynb)
   * Here we discuss how NCrystal can be used as a physics engine in fully fledged frameworks like McStas, OpenMC, or Geant4.
