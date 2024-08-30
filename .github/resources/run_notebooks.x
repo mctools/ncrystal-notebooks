@@ -14,4 +14,8 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
     jupyter nbconvert --to script "${notebookfile}" --output="${PWD}/${bn}_converted"
     echo "   .. executing script"
     time ipython ./${bn}_converted.py | cat
+    if [ ${PIPESTATUS[0]} != 0 ]; then
+        echo "DETECTED ERROR IN: ${bn}"
+        exit 1
+    fi
 done
