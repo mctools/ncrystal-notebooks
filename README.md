@@ -58,6 +58,15 @@ Python notebooks with examples, documentation, and tutorials for usage of NCryst
   </a>
   * Notebook investigating transmission probability of a sapphire filter, and the effect of different ways of modelling.
 
+### Contributed notebooks
+
+Examples from the NEUWAVE-12 tutorial
+
+* [NEUWAVE-12 Examples: water / ice](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Water_Ice.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Water_Ice.ipynb ">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
+  * In this example we use NCrystal to see the wavelength dependence of the total cross section of light water and ice at different temperatures.
+
 ## Instructions for running these notebooks.
 
 ### Browse on GitHub
