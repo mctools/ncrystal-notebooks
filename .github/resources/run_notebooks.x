@@ -11,9 +11,11 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
     mkdir "${REPOROOT}/test_tmp_rundir"
     cd "${REPOROOT}/test_tmp_rundir"
     echo "   .. converting to script"
-    jupyter nbconvert --to script "${notebookfile}" --output="${PWD}/${bn}_converted"
+    cp "${notebookfile}" thenotebook.ipynb
+    jupyter nbconvert --to script ./thenotebook.ipynb --output="${PWD}/thenotebook_converted"
+    test -f ./thenotebook_converted.py
     echo "   .. executing script"
-    time ipython ./${bn}_converted.py | cat
+    time ipython ./thenotebook_converted.py | cat
     if [ ${PIPESTATUS[0]} != 0 ]; then
         echo "DETECTED ERROR IN: ${bn}"
         exit 1
