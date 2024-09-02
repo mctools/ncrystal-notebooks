@@ -78,6 +78,12 @@ Examples from the NEUWAVE-12 tutorial
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this example we will compute the in-scattering probability using different techiques, and see the effect it has in the wavelength dependent transmission.
+* [NEUWAVE-12 Examples: in-scattering](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Extinction_correction_exercise.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Extinction_correction_exercise.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
+  * In this example it is shown how to calculate the coherent elastic cross-section by accessing hkl information in NCrystal. The cross-section is then modified with the extinction parameter from the Sabine model.
+
+
 
 ## Instructions for running these notebooks.
 
