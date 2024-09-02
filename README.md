@@ -70,10 +70,14 @@ Examples from the NEUWAVE-12 tutorial
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this example we will calculate cross-sections and neutron transmission through various metals used for sample holders.
-* [NEUWAVE-12 Examples: water / ice](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Water_Ice.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Water_Ice.ipynb ">
+* [NEUWAVE-12 Examples: water / ice](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Water_Ice.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Water_Ice.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this example we use NCrystal to see the wavelength dependence of the total cross section of light water and ice at different temperatures.
+* [NEUWAVE-12 Examples: in-scattering](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_In_scattering.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_In_scattering.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
+  * In this example we will compute the in-scattering probability using different techiques, and see the effect it has in the wavelength dependent transmission.
 
 ## Instructions for running these notebooks.
 
