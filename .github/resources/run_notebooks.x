@@ -22,7 +22,13 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
         > ./thenotebook.ipynb
     jupyter nbconvert --to script ./thenotebook.ipynb --output="${PWD}/thenotebook_converted"
     test -f ./thenotebook_converted.py
-    if [ "x${bn}" == "xNEUWAVE_12_Examples_Transmission_with_NCrystal_and_McStas.ipynb" ]; then
+    if [ "x${bn}" == "xNEUWAVE_12_Examples_Installing_Plugins_Texture_exercise.ipynb" -a ! -e /proc ]; then
+        echo
+        echo
+        echo "WARNING: SKIPPING NOTEBOOK ABOUT PLUGIN ON OSX!!!"
+        echo
+        echo
+    elif [ "x${bn}" == "xNEUWAVE_12_Examples_Transmission_with_NCrystal_and_McStas.ipynb" ]; then
         echo
         echo
         echo "WARNING: SKIPPING CONDA BASED NOTEBOOK!!!"
