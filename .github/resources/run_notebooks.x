@@ -21,23 +21,20 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
         sed 's#always_do_pip_installs = False#always_do_pip_installs = True#' \
         > ./thenotebook.ipynb
     jupyter nbconvert --to script ./thenotebook.ipynb --output="${PWD}/thenotebook_converted"
-    if [ ! -f ./thenotebook_converted.py -a -f ./thenotebook_converted.txt ]; then
-        #weird, this happens sometimes?!?
-        echo "For some reason the conversion resulting in a .txt file!"
-        echo "FILE BEGIN:"
-        head -10 ./thenotebook_converted.txt
-        echo "..."
-        tail -10 ./thenotebook_converted.txt
-        echo "FILE END:"
-        echo "Trying to rename to .py"
-        mv ./thenotebook_converted.txt ./thenotebook_converted.py
-    fi
     test -f ./thenotebook_converted.py
-    echo "   .. executing script"
-    time ipython ./thenotebook_converted.py | cat
-    if [ ${PIPESTATUS[0]} != 0 ]; then
-        echo "DETECTED ERROR IN: ${bn}"
-        exit 1
+    if [ "x${bn}" == "xNEUWAVE_12_Examples_Transmission_with_NCrystal_and_McStas.ipynb" ]; then
+        echo
+        echo
+        echo "WARNING: SKIPPING CONDA BASED NOTEBOOK!!!"
+        echo
+        echo
+    else
+        echo "   .. executing script"
+        time ipython ./thenotebook_converted.py | cat
+        if [ ${PIPESTATUS[0]} != 0 ]; then
+            echo "DETECTED ERROR IN: ${bn}"
+            exit 1
+        fi
     fi
     deactivate
 done
