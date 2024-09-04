@@ -78,6 +78,10 @@ Examples from the NEUWAVE-12 tutorial
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this example we will compute the in-scattering probability using different techiques, and see the effect it has in the wavelength dependent transmission.
+* [NEUWAVE-12 Examples: in-scattering](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Polymers_with_Functional_Group_Approximation.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Polymers_with_Functional_Group_Approximation.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
+  * In this example we will compute the cross section of polylactic acid using the average functional group approximation.
 * [NEUWAVE-12 Examples: NCrystal materials in McStas](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Transmission_with_NCrystal_and_McStas.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Transmission_with_NCrystal_and_McStas.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
