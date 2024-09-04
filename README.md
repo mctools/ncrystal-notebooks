@@ -62,11 +62,11 @@ Python notebooks with examples, documentation, and tutorials for usage of NCryst
 
 Examples from the NEUWAVE-12 tutorial
 
-* [NEUWAVE-12 Examples: Neutron filters](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Neutron_filters_exercise.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Neutron_filters_exercise.ipynb">
+* [NEUWAVE-12 Examples: neutron filters](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Neutron_filters_exercise.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Neutron_filters_exercise.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this example we will calculate cross-sections and neutron transmission through various polycrystalline and single-crystal filters and make comparisons to experimental data.
-* [NEUWAVE-12 Examples: Sample container transmission exercise](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Sample_container_transmission_exercise.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Sample_container_transmission_exercise.ipynb">
+* [NEUWAVE-12 Examples: sample container transmission exercise](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Sample_container_transmission_exercise.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Sample_container_transmission_exercise.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this example we will calculate cross-sections and neutron transmission through various metals used for sample holders.
@@ -78,7 +78,7 @@ Examples from the NEUWAVE-12 tutorial
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this example we will compute the in-scattering probability using different techiques, and see the effect it has in the wavelength dependent transmission.
-* [NEUWAVE-12 Examples: in-scattering](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Polymers_with_Functional_Group_Approximation.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Polymers_with_Functional_Group_Approximation.ipynb">
+* [NEUWAVE-12 Examples: polymers with Functional Group Approximation](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Polymers_with_Functional_Group_Approximation.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Polymers_with_Functional_Group_Approximation.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this example we will compute the cross section of polylactic acid using the average functional group approximation.
