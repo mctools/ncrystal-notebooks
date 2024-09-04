@@ -82,7 +82,7 @@ Examples from the NEUWAVE-12 tutorial
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this example we install McStas and Ncrystal using conda / mamba, and create a instrument simulation for a simple transmission beamline with a NCrystal sample.
-* [NEUWAVE-12 Examples: extiction correction](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Extinction_correction_exercise.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Extinction_correction_exercise.ipynb">
+* [NEUWAVE-12 Examples: extinction correction](notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Extinction_correction_exercise.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/NEUWAVE-12/NEUWAVE_12_Examples_Extinction_correction_exercise.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
   * In this example it is shown how to calculate the coherent elastic cross-section by accessing hkl information in NCrystal. The cross-section is then modified with the extinction parameter from the Sabine model.
