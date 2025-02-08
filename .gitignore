@@ -6,3 +6,4 @@
 __pycache__/
 my_venv_for_ncrystal_notebooks/
 
+.ipynb_checkpoints/
