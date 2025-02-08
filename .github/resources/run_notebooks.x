@@ -31,7 +31,7 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
     if [ "x${NCNOTEBOOKS_FORCE_SKIP_PLUGIN_NB:-0}" == "x1" ]; then
         DO_RUN_PLUGIN_NOTEBOOKS=0
     fi
-    if [ "x${bn}" == "xNEUWAVE_12_Examples_Installing_Plugins_Texture_exercise.ipynb" -a "${DO_RUN_PLUGIN_NOTEBOOKS}" == "1" ]; then
+    if [ "x${bn}" == "xNEUWAVE_12_Examples_Installing_Plugins_Texture_exercise.ipynb" -a "${DO_RUN_PLUGIN_NOTEBOOKS}" == "0" ]; then
         echo
         echo
         echo "WARNING: SKIPPING NOTEBOOK ABOUT PLUGIN!!!"
