@@ -25,13 +25,16 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
     #For now, the texture plugin notebook should only be run on linux and not in
     #NCrystal 4 before it has been ported:
     DO_RUN_PLUGIN_NOTEBOOKS=0
-    if [ -e /proc -a "x${NCNOTEBOOKS_FORCE_SKIP_PLUGIN_NB:-}" != "x1" ]; then
+    if [ -e /proc ]; then
         DO_RUN_PLUGIN_NOTEBOOKS=1
+    fi
+    if [ "x${NCNOTEBOOKS_FORCE_SKIP_PLUGIN_NB:-0}" == "x1" ]; then
+        DO_RUN_PLUGIN_NOTEBOOKS=0
     fi
     if [ "x${bn}" == "xNEUWAVE_12_Examples_Installing_Plugins_Texture_exercise.ipynb" -a "${DO_RUN_PLUGIN_NOTEBOOKS}" == "1" ]; then
         echo
         echo
-        echo "WARNING: SKIPPING NOTEBOOK ABOUT PLUGIN ON OSX!!!"
+        echo "WARNING: SKIPPING NOTEBOOK ABOUT PLUGIN!!!"
         echo
         echo
     elif [ "x${bn}" == "xNEUWAVE_12_Examples_Transmission_with_NCrystal_and_McStas.ipynb" ]; then
