@@ -108,19 +108,14 @@ Clicking the google Colab links above will open the notebooks in google Colab. T
 
 ### Run locally
 
-Running locally is easy since everything can be installed via `pip` or `conda`. So either create a conda environment using the [conda.yml](conda.yml) environment file, or `pip install` all the required dependencies into a dedicated Python environment by (you can of course also `pip install` into your default Python environment if you are not the careful type):
+Running locally is easy since everything can be installed via `pip` or `conda`. So either create a conda environment using the [conda.yml](conda.yml) environment file, or `pip install` all the required dependencies into a dedicated Python environment by (you can of course also `pip install` into your default Python environment if you are not the careful type).:
 
 ```
-#create the directory and step into it:
-mkdir ./my_venv_for_ncrystal_notebooks/
-cd ./my_venv_for_ncrystal_notebooks/
-#create and activate the virtual environment:
+#create and activate a virtual environment:
 python3 -mvenv ./venv
 . ./venv/bin/activate
-#install the packages:
-python3 -mpip install ncrystal numpy matplotlib spglib ase gemmi jupyterlab ipympl
+#install the packages needed by NCrystal and JupyterLab:
+python3 -mpip install "ncrystal[all]" jupyterlab ipympl
 ```
 
 In any case, you can then download the above notebooks (individually, or just clone or download the whole ncrystal-notebooks repo) and open the notebooks via the command `jupyter-lab nameofnotebook.ipynb`.
-
-Note: although support for Windows is planned for EOY2024, it is by August 2024 still not possible to install NCrystal on Windows. So Windows users should either use the WSL, or simply run via google Colab as noted above.
