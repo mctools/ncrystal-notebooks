@@ -7,21 +7,14 @@ on:
     - cron: '30 11 * * 2'  # 11:30 every Tuesday
 
 jobs:
-  build:
-    # The CMake configure and build commands are platform agnostic and should work equally
-    # well on Windows or Mac.  You can convert this to a matrix build if you need
-    # cross-platform coverage.
-    # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+  run_all_notebooks:
     strategy:
       matrix:
         include:
-           #Note: Python 3.13 works (Aug 2024) because of the
-           #"allow-prereleases: true" below.
           - { os: ubuntu-latest, python: '3.10' }
-          - { os: ubuntu-latest, python: '3.11' }
-          #Too slow, still requires too many wheels to be built - { os: ubuntu-latest, python: '3.13' }
           - { os: macos-latest,  python: "3.12" }
-    name: ${{ matrix.os }}.${{ matrix.CC }}.python-${{ matrix.python }}
+          - { os: windows-latest,  python: "3.12" }
+    name: ${{ matrix.os }}.python-${{ matrix.python }}
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -34,16 +27,12 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python }}
-        allow-prereleases: true #Needed (Aug 2024) for Python 3.13.
 
     - name: Pip install
-      run: |
-        set -eux
-        python3 -m pip install numpy matplotlib spglib ase gemmi jupyterlab ipympl
-        python3 -m pip install ncrystal>=3.9.4
-        #python3 -m pip install pymatgen
+      run: python3 -m pip install ncrystal[all]>=4.0.0
 
     - name: Check versions
+      shell: bash
       run: |
         set -eux
         which python3
@@ -54,6 +43,7 @@ jobs:
         ncrystal-config -s
 
     - name: Launch tests
+      shell: bash
       run: |
-        set -eu
+        set -eux
         ./src/.github/resources/run_notebooks.x

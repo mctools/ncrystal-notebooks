@@ -1,6 +1,9 @@
 #!/bin/bash
 set -eu
 export REPOROOT="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )/../../" && pwd )"
+CODCACHE_SRC="${REPOROOT}/.github/resources/codcache"
+test -d $CODCACHE_SRC
+
 for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
     echo
     echo '------------------------------------------------------'
@@ -13,6 +16,7 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
     rm -rf "${REPOROOT}/test_tmp_rundir"
     mkdir "${REPOROOT}/test_tmp_rundir"
     cd "${REPOROOT}/test_tmp_rundir"
+    cp -rp "${CODCACHE_SRC}" ./ncrystal_onlinedb_filecache
     python3 -mvenv create ./venv
     . ./venv/bin/activate
     python3 -mpip install jupyter ipython
@@ -31,13 +35,7 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
     if [ "x${NCNOTEBOOKS_FORCE_SKIP_PLUGIN_NB:-0}" == "x1" ]; then
         DO_RUN_PLUGIN_NOTEBOOKS=0
     fi
-    if [ "x${bn}" == "xNEUWAVE_12_Examples_Installing_Plugins_Texture_exercise.ipynb" -a "${DO_RUN_PLUGIN_NOTEBOOKS}" == "0" ]; then
-        echo
-        echo
-        echo "WARNING: SKIPPING NOTEBOOK ABOUT PLUGIN!!!"
-        echo
-        echo
-    elif [ "x${bn}" == "xNEUWAVE_12_Examples_Transmission_with_NCrystal_and_McStas.ipynb" ]; then
+    if [ "x${bn}" == "xNEUWAVE_12_Examples_Transmission_with_NCrystal_and_McStas.ipynb" ]; then
         echo
         echo
         echo "WARNING: SKIPPING CONDA BASED NOTEBOOK!!!"
