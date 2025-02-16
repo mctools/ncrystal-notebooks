@@ -1,0 +1,317 @@
+#------------------------------------------------------------------------------
+#$Date: 2019-05-01 00:12:56 +0200 (Wed 01 de May de 2019) $
+#$Revision: 214853 $
+#$URL: svn://www.crystallography.net/cod/cif/7/12/33/7123351.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_7123351
+loop_
+_publ_author_name
+'Wei, Zheng'
+'Dubceac, Cristina'
+'Petrukhina, Marina A.'
+'Dikarev, Evgeny V.'
+_publ_section_title
+;
+ From a volatile molecular precursor to twin-free single crystals of
+ bismuth
+;
+_journal_name_full               'Chemical Communications'
+_journal_paper_doi               10.1039/C9CC02820J
+_journal_year                    2019
+_chemical_formula_moiety         Bi
+_chemical_formula_sum            Bi
+_chemical_formula_weight         208.98
+_space_group_crystal_system      trigonal
+_space_group_IT_number           166
+_space_group_name_Hall           '-R 3 2"'
+_space_group_name_H-M_alt        'R -3 m'
+_symmetry_space_group_name_Hall  '-R 3 2"'
+_symmetry_space_group_name_H-M   'R -3 m :H'
+_atom_sites_solution_primary     direct
+_atom_sites_solution_secondary   difmap
+_audit_creation_method           SHELXL-2018/3
+_audit_update_record
+;
+2018-09-13 deposited with the CCDC.    2019-04-30 downloaded from the CCDC.
+;
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                120
+_cell_formula_units_Z            6
+_cell_length_a                   4.5392(4)
+_cell_length_b                   4.5392(4)
+_cell_length_c                   11.8347(11)
+_cell_measurement_reflns_used    3387
+_cell_measurement_temperature    100(2)
+_cell_measurement_theta_max      33.06
+_cell_measurement_theta_min      5.17
+_cell_volume                     211.18(3)
+_computing_cell_refinement       'SAINT V.8.38A (Bruker AXS Inc., 2017)'
+_computing_data_collection       'APEX3 v.2017.3-0 (Bruker AXS Inc., 2017)'
+_computing_data_reduction        'SAINT V.8.38A (Bruker AXS Inc., 2017)'
+_computing_molecular_graphics    'Xshell v.6.3.1 (Bruker AXS Inc., 2016)'
+_computing_publication_material  'APEX3 v.2017.3-0 (Bruker AXS Inc., 2017)'
+_computing_structure_refinement  'SHELXL-2018/3 (Sheldrick, 2018)'
+_computing_structure_solution    'SHELXT 2018/2 (Sheldrick, 2018)'
+_diffrn_ambient_temperature      100(2)
+_diffrn_measured_fraction_theta_full 0.983
+_diffrn_measured_fraction_theta_max 0.968
+_diffrn_measurement_device_type  'Bruker D8 Venture PHOTON 100 CMOS'
+_diffrn_measurement_method       'omega and phi scans'
+_diffrn_radiation_monochromator  graphite
+_diffrn_radiation_source         'fine-focus sealed tube'
+_diffrn_radiation_type           MoK\a
+_diffrn_radiation_wavelength     0.71073
+_diffrn_reflns_av_R_equivalents  0.0489
+_diffrn_reflns_av_unetI/netI     0.0119
+_diffrn_reflns_Laue_measured_fraction_full 0.983
+_diffrn_reflns_Laue_measured_fraction_max 0.968
+_diffrn_reflns_limit_h_max       6
+_diffrn_reflns_limit_h_min       -6
+_diffrn_reflns_limit_k_max       6
+_diffrn_reflns_limit_k_min       -6
+_diffrn_reflns_limit_l_max       18
+_diffrn_reflns_limit_l_min       -18
+_diffrn_reflns_number            3525
+_diffrn_reflns_point_group_measured_fraction_full 0.983
+_diffrn_reflns_point_group_measured_fraction_max 0.968
+_diffrn_reflns_theta_full        25.242
+_diffrn_reflns_theta_max         33.055
+_diffrn_reflns_theta_min         5.168
+_exptl_absorpt_coefficient_mu    124.445
+_exptl_absorpt_correction_T_max  0.0417
+_exptl_absorpt_correction_T_min  0.0039
+_exptl_absorpt_correction_type   numerical
+_exptl_absorpt_process_details
+;
+SADABS-2016/2 (Bruker, 2016/2) was 
+used for absorption correction. 
+Krause, L., Herbst-Irmer, R., 
+Sheldrick G.M. & Stalke D.,
+J. Appl. Cryst. 48 (2015) 3-10.
+;
+_exptl_crystal_colour            'metallic silver'
+_exptl_crystal_density_diffrn    9.860
+_exptl_crystal_description       block
+_exptl_crystal_F_000             498
+_exptl_crystal_size_max          0.115
+_exptl_crystal_size_mid          0.108
+_exptl_crystal_size_min          0.061
+_refine_diff_density_max         1.232
+_refine_diff_density_min         -1.849
+_refine_diff_density_rms         0.290
+_refine_ls_extinction_coef       0.0060(3)
+_refine_ls_extinction_expression Fc^*^=kFc[1+0.001xFc^2^\l^3^/sin(2\q)]^-1/4^
+_refine_ls_extinction_method     'SHELXL-2018/3 (Sheldrick 2018)'
+_refine_ls_goodness_of_fit_ref   1.227
+_refine_ls_hydrogen_treatment    undef
+_refine_ls_matrix_type           full
+_refine_ls_number_parameters     5
+_refine_ls_number_reflns         118
+_refine_ls_number_restraints     0
+_refine_ls_restrained_S_all      1.227
+_refine_ls_R_factor_all          0.0104
+_refine_ls_R_factor_gt           0.0104
+_refine_ls_shift/su_max          0.001
+_refine_ls_shift/su_mean         0.000
+_refine_ls_structure_factor_coef Fsqd
+_refine_ls_weighting_details
+'w=1/[\s^2^(Fo^2^)+(0.0092P)^2^+4.5262P] where P=(Fo^2^+2Fc^2^)/3'
+_refine_ls_weighting_scheme      calc
+_refine_ls_wR_factor_gt          0.0258
+_refine_ls_wR_factor_ref         0.0258
+_reflns_Friedel_coverage         0.000
+_reflns_number_gt                118
+_reflns_number_total             118
+_reflns_threshold_expression     'I > 2\s(I)'
+_cod_data_source_file            c9cc02820j2.cif
+_cod_data_source_block           100K
+_cod_original_cell_volume        211.18(4)
+_cod_database_code               7123351
+_shelx_shelxl_version_number     2018/3
+_shelx_space_group_comment
+;
+The symmetry employed for this shelxl refinement is uniquely defined
+by the following loop, which should always be used as a source of
+symmetry information in preference to the above space-group names.
+They are only intended as comments.
+;
+_shelx_estimated_absorpt_t_min   0.025
+_shelx_estimated_absorpt_t_max   0.049
+_shelx_res_file
+;
+TITL 3_a.res in R-3m
+    100K.res
+    created by SHELXL-2018/3 at 17:36:10 on 13-Sep-2018
+REM Old TITL 3 in R3m
+REM SHELXT solution in R-3m: R1 0.045, Rweak 0.019, Alpha 0.001
+REM <I/s>   0.000 for    0 systematic absences,  Orientation as input
+REM Formula found by SHELXT:  Bi
+
+CELL  0.71073   4.5392   4.5392  11.8347   90.000   90.000  120.000
+ZERR    6.000   0.0004   0.0004   0.0011    0.000    0.000    0.000
+LATT  3
+SYMM -Y, X-Y, Z
+SYMM -X+Y, -X, Z
+SYMM Y, X, -Z
+SYMM X-Y, -Y, -Z
+SYMM -X, -X+Y, -Z
+SFAC BI
+UNIT 6
+TEMP -173.160
+SIZE 0.061 0.108 0.115
+L.S. 60
+BOND
+ACTA
+LIST 4
+FMAP 2
+PLAN 20
+OMIT -1 1 1
+OMIT  0 2 1
+WGHT    0.009200    4.526200
+EXTI    0.005991
+FVAR       0.28954
+BI1   1    0.666667    0.333333    0.567344    10.16667    0.00718    0.00718 =
+         0.00472    0.00000    0.00000    0.00359
+HKLF 4
+
+
+
+
+REM  3_a.res in R-3m
+REM wR2 = 0.0258, GooF = S = 1.227, Restrained GooF = 1.227 for all data
+REM R1 = 0.0104 for 118 Fo > 4sig(Fo) and 0.0104 for all 118 data
+REM 5 parameters refined using 0 restraints
+
+END
+
+WGHT      0.0092      4.5262
+
+REM Highest difference peak  1.232,  deepest hole -1.849,  1-sigma level  0.290
+Q1    1   0.5871  0.4129  0.6154  10.50000  0.05    1.23
+Q2    1   0.5000  0.5000  0.5000  10.25000  0.05    0.96
+Q3    1   0.3333  0.3141  0.6667  10.50000  0.05    0.68
+Q4    1   0.4928  0.2464  0.5234  10.50000  0.05    0.66
+Q5    1   0.5038  0.0076  0.6167  10.50000  0.05    0.60
+Q6    1   0.8502  0.1498  0.6423  10.50000  0.05    0.54
+Q7    1   0.9808  0.3836  0.5556  11.00000  0.05    0.49
+Q8    1   1.0443  0.2684  0.6139  11.00000  0.05    0.44
+Q9    1   0.6667  0.3333  0.4131  10.16667  0.05    0.40
+Q10   1   0.6667  0.3333  0.3643  10.16667  0.05    0.40
+Q11   1   0.7914  0.5828  0.4036  10.50000  0.05    0.39
+Q12   1   0.8246  0.6492  0.5064  10.50000  0.05    0.30
+Q13   1   0.8234  0.0000  0.5000  10.50000  0.05    0.28
+Q14   1   0.8875  0.7749  0.4512  10.50000  0.05    0.25
+Q15   1   0.9129  0.0871  0.5550  10.50000  0.05    0.14
+Q16   1   0.5835  0.2917  0.4770  10.50000  0.05    0.11
+;
+_shelx_res_checksum              77052
+loop_
+_space_group_symop_operation_xyz
+'x, y, z'
+'-y, x-y, z'
+'-x+y, -x, z'
+'y, x, -z'
+'x-y, -y, -z'
+'-x, -x+y, -z'
+'x+2/3, y+1/3, z+1/3'
+'-y+2/3, x-y+1/3, z+1/3'
+'-x+y+2/3, -x+1/3, z+1/3'
+'y+2/3, x+1/3, -z+1/3'
+'x-y+2/3, -y+1/3, -z+1/3'
+'-x+2/3, -x+y+1/3, -z+1/3'
+'x+1/3, y+2/3, z+2/3'
+'-y+1/3, x-y+2/3, z+2/3'
+'-x+y+1/3, -x+2/3, z+2/3'
+'y+1/3, x+2/3, -z+2/3'
+'x-y+1/3, -y+2/3, -z+2/3'
+'-x+1/3, -x+y+2/3, -z+2/3'
+'-x, -y, -z'
+'y, -x+y, -z'
+'x-y, x, -z'
+'-y, -x, z'
+'-x+y, y, z'
+'x, x-y, z'
+'-x+2/3, -y+1/3, -z+1/3'
+'y+2/3, -x+y+1/3, -z+1/3'
+'x-y+2/3, x+1/3, -z+1/3'
+'-y+2/3, -x+1/3, z+1/3'
+'-x+y+2/3, y+1/3, z+1/3'
+'x+2/3, x-y+1/3, z+1/3'
+'-x+1/3, -y+2/3, -z+2/3'
+'y+1/3, -x+y+2/3, -z+2/3'
+'x-y+1/3, x+2/3, -z+2/3'
+'-y+1/3, -x+2/3, z+2/3'
+'-x+y+1/3, y+2/3, z+2/3'
+'x+1/3, x-y+2/3, z+2/3'
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_adp_type
+_atom_site_occupancy
+_atom_site_site_symmetry_order
+_atom_site_calc_flag
+_atom_site_refinement_flags_posn
+_atom_site_refinement_flags_adp
+_atom_site_refinement_flags_occupancy
+Bi1 Bi 0.666667 0.333333 0.56734(2) 0.00636(14) Uani 1 6 d S T P
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_23
+_atom_site_aniso_U_13
+_atom_site_aniso_U_12
+Bi1 0.00718(15) 0.00718(15) 0.00472(18) 0.000 0.000 0.00359(7)
+loop_
+_atom_type_symbol
+_atom_type_description
+_atom_type_scat_dispersion_real
+_atom_type_scat_dispersion_imag
+_atom_type_scat_source
+Bi Bi -4.1077 10.2566 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+loop_
+_geom_angle_atom_site_label_1
+_geom_angle_atom_site_label_2
+_geom_angle_atom_site_label_3
+_geom_angle
+_geom_angle_site_symmetry_1
+_geom_angle_site_symmetry_3
+Bi1 Bi1 Bi1 95.448(12) 19_666 19_656
+Bi1 Bi1 Bi1 95.448(12) 19_666 19_766
+Bi1 Bi1 Bi1 95.447(12) 19_656 19_766
+Bi1 Bi1 Bi1 91.663(5) 19_666 25_666
+Bi1 Bi1 Bi1 169.415(15) 19_656 25_666
+Bi1 Bi1 Bi1 91.663(5) 19_766 25_666
+Bi1 Bi1 Bi1 169.415(15) 19_666 25_656
+Bi1 Bi1 Bi1 91.662(5) 19_656 25_656
+Bi1 Bi1 Bi1 91.662(6) 19_766 25_656
+Bi1 Bi1 Bi1 80.279(11) 25_666 25_656
+Bi1 Bi1 Bi1 91.663(5) 19_666 25_556
+Bi1 Bi1 Bi1 91.663(5) 19_656 25_556
+Bi1 Bi1 Bi1 169.415(15) 19_766 25_556
+Bi1 Bi1 Bi1 80.279(11) 25_666 25_556
+Bi1 Bi1 Bi1 80.279(11) 25_656 25_556
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_distance
+_geom_bond_site_symmetry_2
+Bi1 Bi1 3.0674(3) 19_666
+Bi1 Bi1 3.0674(3) 19_656
+Bi1 Bi1 3.0674(3) 19_766
+Bi1 Bi1 3.5207(4) 25_666
+Bi1 Bi1 3.5207(4) 25_656
+Bi1 Bi1 3.5207(4) 25_556

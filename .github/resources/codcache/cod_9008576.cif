@@ -1,0 +1,71 @@
+#------------------------------------------------------------------------------
+#$Date: 2024-05-06 09:39:41 +0200 (Mon 06 de May de 2024) $
+#$Revision: 291735 $
+#$URL: svn://www.crystallography.net/cod/cif/9/00/85/9008576.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/. The original data for this entry
+# were provided the American Mineralogist Crystal Structure Database,
+# http://rruff.geo.arizona.edu/AMS/amcsd.php
+#
+# The file may be used within the scientific community so long as
+# proper attribution is given to the journal article from which the
+# data were obtained.
+#
+data_9008576
+loop_
+_publ_author_name
+'Wyckoff, R. W. G.'
+_publ_section_title
+;
+ Second edition. Interscience Publishers, New York, New York
+;
+_journal_name_full               'Crystal Structures'
+_journal_page_first              7
+_journal_page_last               83
+_journal_volume                  1
+_journal_year                    1963
+_chemical_formula_sum            Bi
+_chemical_name_common            Bismuth
+_chemical_name_mineral           Bismuth
+_space_group_IT_number           166
+_symmetry_space_group_name_Hall  '-P 3* 2'
+_symmetry_space_group_name_H-M   'R -3 m :R'
+_cell_angle_alpha                57.237
+_cell_angle_beta                 57.237
+_cell_angle_gamma                57.237
+_cell_length_a                   4.7459
+_cell_length_b                   4.7459
+_cell_length_c                   4.7459
+_cell_formula_units_Z            2
+_cell_volume                     70.776
+_database_code_amcsd             0011254
+_exptl_crystal_density_diffrn    9.806
+_cod_original_sg_symbol_H-M      'R -3 m'
+_cod_database_code               9008576
+loop_
+_space_group_symop_operation_xyz
+x,y,z
+-x,-z,-y
+-z,-x,-y
+y,x,z
+y,z,x
+-z,-y,-x
+-x,-y,-z
+x,z,y
+z,x,y
+-y,-x,-z
+-y,-z,-x
+z,y,x
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Bi 0.23700 0.23700 0.23700
+loop_
+_cod_related_entry_id
+_cod_related_entry_database
+_cod_related_entry_code
+1 AMCSD 0011254
