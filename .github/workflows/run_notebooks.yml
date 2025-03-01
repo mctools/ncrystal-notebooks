@@ -27,8 +27,8 @@ jobs:
       with:
         python-version: ${{ matrix.python }}
 
-    - name: Pip install
-      run: python3 -m pip install ncrystal[all]>=4.0.0
+#    - name: Pip install
+#      run: python3 -m pip install ncrystal[all]>=4.0.0
 
     - name: Check versions
       shell: bash

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -eu
 export REPOROOT="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )/../../" && pwd )"
 CODCACHE_SRC="${REPOROOT}/.github/resources/codcache"
@@ -19,6 +19,19 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
     cp -rp "${CODCACHE_SRC}" ./ncrystal_onlinedb_filecache
     python3 -mvenv create ./venv
     . ./venv/bin/activate
+
+    if [ "x${NCNOTEBOOKS_USE_NCRYSTAL_REPO}" != "x" ]; then
+        time python3 -m pip install "${NCNOTEBOOKS_USE_NCRYSTAL_REPO}/ncrystal_core"
+        python3 -m pip install "${NCNOTEBOOKS_USE_NCRYSTAL_REPO}/ncrystal_python"
+        python3 -m pip install "${NCNOTEBOOKS_USE_NCRYSTAL_REPO}/ncrystal_metapkg"
+    fi
+
+    #Workaround for https://github.com/spglib/spglib/issues/553 :
+    TMPPYVER=$(python3 -c 'import sys; print("%i.%i"%sys.version_info[0:2])')
+    if [ "${TMPPYVER}" == "3.13" ]; then
+        python3 -mpip install git+https://github.com/tkittel/spglib.git
+    fi
+
     python3 -mpip install jupyter ipython
     echo "   .. converting to script"
     cat "${notebookfile}" | \
@@ -26,15 +39,6 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
         > ./thenotebook.ipynb
     jupyter nbconvert --to script ./thenotebook.ipynb --output="${PWD}/thenotebook_converted"
     test -f ./thenotebook_converted.py
-    #For now, the texture plugin notebook should only be run on linux and not in
-    #NCrystal 4 before it has been ported:
-    DO_RUN_PLUGIN_NOTEBOOKS=0
-    if [ -e /proc ]; then
-        DO_RUN_PLUGIN_NOTEBOOKS=1
-    fi
-    if [ "x${NCNOTEBOOKS_FORCE_SKIP_PLUGIN_NB:-0}" == "x1" ]; then
-        DO_RUN_PLUGIN_NOTEBOOKS=0
-    fi
     if [ "x${bn}" == "xNEUWAVE_12_Examples_Transmission_with_NCrystal_and_McStas.ipynb" ]; then
         echo
         echo
