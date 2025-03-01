@@ -38,8 +38,8 @@ jobs:
         python3 --version
         which cmake
         cmake --version
-        nctool --version
-        ncrystal-config -s
+        #nctool --version
+        #ncrystal-config -s
 
     - name: Launch tests
       shell: bash
