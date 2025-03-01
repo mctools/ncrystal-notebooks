@@ -20,7 +20,7 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
     python3 -mvenv create ./venv
     . ./venv/bin/activate
 
-    if [ "x${NCNOTEBOOKS_USE_NCRYSTAL_REPO}" != "x" ]; then
+    if [ "x${NCNOTEBOOKS_USE_NCRYSTAL_REPO:-}" != "x" ]; then
         time python3 -m pip install "${NCNOTEBOOKS_USE_NCRYSTAL_REPO}/ncrystal_core"
         python3 -m pip install "${NCNOTEBOOKS_USE_NCRYSTAL_REPO}/ncrystal_python"
         python3 -m pip install "${NCNOTEBOOKS_USE_NCRYSTAL_REPO}/ncrystal_metapkg"
