@@ -115,7 +115,7 @@ Running locally is easy since everything can be installed via `pip` or `conda`. 
 python3 -mvenv ./venv
 . ./venv/bin/activate
 #install the packages needed by NCrystal and JupyterLab:
-python3 -mpip install "ncrystal[all]" jupyterlab ipympl
+python3 -mpip install "ncrystal[all]" jupyterlab ipympl pandas
 ```
 
 In any case, you can then download the above notebooks (individually, or just clone or download the whole ncrystal-notebooks repo) and open the notebooks via the command `jupyter-lab nameofnotebook.ipynb`.

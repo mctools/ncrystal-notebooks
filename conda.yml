@@ -8,10 +8,9 @@ dependencies:
   - numpy
   - matplotlib
   - spglib
-  # There is a bug in ASE 3.24 which prevents QuantumEspresso files. Once 3.25
-  # is out we can remove the version pinning again
-  - ase<3.24.0
+  - ase
   - gemmi
   - jupyterlab
   - ipympl
+  - pandas
 #  - pymatgen #(optional)
