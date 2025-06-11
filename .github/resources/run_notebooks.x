@@ -27,10 +27,10 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
     fi
 
     #Workaround for https://github.com/spglib/spglib/issues/553 :
-    TMPPYVER=$(python3 -c 'import sys; print("%i.%i"%sys.version_info[0:2])')
-    if [ "${TMPPYVER}" == "3.13" ]; then
-        python3 -mpip install git+https://github.com/tkittel/spglib.git
-    fi
+    #TMPPYVER=$(python3 -c 'import sys; print("%i.%i"%sys.version_info[0:2])')
+    #if [ "${TMPPYVER}" == "3.13" ]; then
+    #   python3 -mpip install git+https://github.com/tkittel/spglib.git
+    #fi
 
     python3 -mpip install jupyter ipython
     echo "   .. converting to script"
@@ -43,6 +43,13 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
         echo
         echo
         echo "WARNING: SKIPPING CONDA BASED NOTEBOOK!!!"
+        echo
+        echo
+    elif [ "x${bn}" == "xncrystal2_advanced_05_export_ENDF.ipynb" ]; then
+        #Should be very temporarily!!!!!
+        echo
+        echo
+        echo "WARNING: SKIPPING ENDF NOTEBOOK!!!"
         echo
         echo
     else
