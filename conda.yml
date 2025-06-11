@@ -7,10 +7,12 @@ dependencies:
   - ncrystal
   - numpy
   - matplotlib
+  - jupyterlab
+  - ipympl
+  #Optional dependencies only required for some notebooks:
   - spglib
   - ase
   - gemmi
-  - jupyterlab
-  - ipympl
   - pandas
-#  - pymatgen #(optional)
+  - tqdm
+  - endf-parserpy
