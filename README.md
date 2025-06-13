@@ -100,6 +100,17 @@ Examples from the NEUWAVE-12 tutorial
   </a>
   * This exercise shows how to use the texture plugin, CrysText, together with NCrystal. In this example, the modifications to the coherent elastic cross-section are included in the NCrystal plugin.
 
+Examples from the ND2025 conference
+
+* [ND2025 Examples: NCrystal materials in OpenMC](notebooks/contributed/ND2025/ND2025_OpenMC_NCrystal.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/ND2025/ND2025_OpenMC_NCrystal.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
+  * In this example we use NCrystal materials in OpenMC to calculate the diffraction pattern from a germanium single crystal.
+
+* [ND2025 Examples: ncmat2endf](notebooks/contributed/ND2025/ND2025_ncmat2endf.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/ND2025/ND2025_ncmat2endf.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
+  * In this example we use ncmat2endf to export ENDF files from NCrystal, then use NJOY to convert these files into ACE format, and add them to OpenMC simulations.
 
 ## Instructions for running these notebooks.
 
