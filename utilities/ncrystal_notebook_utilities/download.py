@@ -20,7 +20,7 @@ def download_file( url,
                 fh.write(chunk)
     return tgt_path
 
-def extract_archive( archive_path, dest ):
+def extract_archive( archive_path, dest, quiet = False ):
     import tarfile
     import sys
     import pathlib
