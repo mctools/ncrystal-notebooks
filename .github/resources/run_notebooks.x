@@ -45,6 +45,12 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
         echo "WARNING: SKIPPING CONDA BASED NOTEBOOK!!!"
         echo
         echo
+    elif [ "x${bn}" == "xND2025_OpenMC_NCrystal.ipynb" ]; then
+        echo
+        echo
+        echo "WARNING: SKIPPING CONDA BASED NOTEBOOK!!!"
+        echo
+        echo
     elif [ "x${bn}" == "xncrystal2_advanced_05_export_ENDF.ipynb" ]; then
         #Should be very temporarily!!!!!
         echo
