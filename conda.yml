@@ -16,3 +16,6 @@ dependencies:
   - pandas
   - tqdm
   - endf-parserpy
+  - openmc
+  - njoy2016
+  - mcstas-core
