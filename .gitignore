@@ -3,6 +3,10 @@
 \#*\#
 .\#*
 
+*.egg-info/
+dist/
+build/
+
 __pycache__/
 /my_venv_for_ncrystal_notebooks/
 /venv/
