@@ -8,10 +8,10 @@ def download_and_prepare_nndc_data():
         print("... Already downloaded and extracted!")
     else:
         from .download import extract_archive, download_file
-        print("... Downloading...")
-        f = download_file(source, skip_if_exists = True )
-        print("... Extracting...")
-        extract_archive( f, '.' )
+        print("... Downloading (this might take a minute)...")
+        f = download_file(source, skip_if_exists = True, quiet = true )
+        print("... Extracting (this might take a minute)...")
+        extract_archive( f, '.', quiet )
     if not openmc_xsfile.is_file():
         raise RuntimeError(f"Did not find expected file: {openmc_xsfile}")
     print(f"OpenMC cross section file prepared in {openmc_xsfile}")
