@@ -112,6 +112,11 @@ Examples from the ND2025 conference
   </a>
   * In this example we use ncmat2endf to export ENDF files from NCrystal, then use NJOY to convert these files into ACE format, and add them to OpenMC simulations.
 
+* [ND2025 Examples: Create a library with extinction](notebooks/contributed/ND2025/ND2025_Extinction_library.ipynb)  <a target="_blank" href="https://colab.research.google.com/github/mctools/ncrystal-notebooks/blob/main/notebooks/contributed/ND2025/ND2025_Extinction_library.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
+  * In this example we use ncmat2endf and the extinction plugin, CrysExtn, to create a ENDF file.  
+
 ## Instructions for running these notebooks.
 
 ### Browse on GitHub
