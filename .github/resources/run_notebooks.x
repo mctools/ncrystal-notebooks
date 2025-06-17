@@ -57,6 +57,12 @@ for notebookfile in `find "${REPOROOT}"/notebooks/ -name '*.ipynb'`; do
         echo "WARNING: SKIPPING CONDA BASED NOTEBOOK!!!"
         echo
         echo
+    elif [ "x${bn}" == "xND2025_Extinction_ENDF_library.ipynb" ]; then
+        echo
+        echo
+        echo "WARNING: SKIPPING CONDA BASED NOTEBOOK!!!"
+        echo
+        echo
     else
         echo "   .. executing script"
         time ipython ./thenotebook_converted.py | cat
