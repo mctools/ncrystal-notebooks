@@ -1,7 +1,7 @@
 [project]
 name = "ncrystal-notebook-utilities"
-version = "0.0.1"
-requires-python = ">=3.9"
+version = "0.0.2"
+requires-python = ">=3.10"
 dependencies = []
 authors = [
   { name="NCrystal developers" },
@@ -19,7 +19,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/mctools/ncrystal/issues"
 
 [build-system]
-requires = ["setuptools>=64.0"]
+requires = ["setuptools>=70.0"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
