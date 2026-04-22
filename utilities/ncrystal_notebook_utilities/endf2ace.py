@@ -10,7 +10,66 @@
 
 def convert_endf_tsl_to_ace(endf_tsl, material_name=None, ace_name=None,
                             suffix='.00', ace_filename=None, temp=None,
-                            emax=None, zaids=None, njoy_exec='njoy'):
+                            emax=None, zaids=None, njoy_exec='njoy',
+                            tol=0.001, nbin=32, iwt=2, nbint=200):
+    """ Converts an ENDF-6 formatted [1] thermal scattering library (TSL)
+    into ACE format [2] for Monte Carlo codes using NJOY2016 [3]. EndfParserPy [4]
+    is used to read parameters from the ENDF-6 file that are needed to configure
+    the NJOY input, and to generate a dummy ENDF-6 file that is needed to run THERMR.
+    The dummy ENDF-6 file is given the arbitrary values MAT=10 and AWR=1.0 but they
+    are not used by Monte Carlo codes. The energy grid of this dummy file is set to the
+    energy grid hard coded into THERMR for version NJOY2016.79, to avoid energy 
+    interpolation.
+
+    Parameters
+    ----------
+    endf_tsl: str
+        ENDF-6 file to convert
+    
+    material_name: str
+        Name of the material (only used in description strings)
+    
+    ace_name: str
+        Thermal ACE name for ACER. Truncated to 6 characters.
+    
+    temp: float
+        Temperature to process. If none is given, the first temperature in the 
+        ENDF-6 TSL file is used.
+
+    emax: float
+        Maximum energy for the ACE file. If none is given, the emax value in the
+        ENDF-6 TSL file is used. If that value is not available, the default is 5 eV.
+
+    zaids: str
+        ZAIDs (Z*1000+A) values of the nuclides that will be associated with this
+        thermal ACE file. If none is given, the values from MF=7/MT=451 are used.
+        If that is not available, the natural isotopes of the element are used.
+
+    njoy_exec: str
+        Executable for NJOY2016
+
+    tol: float
+        Tolerance used for linearization in RECORN and THERMR (default: 0.001)
+
+    nbin: int
+        Number of angular bins used in THERMR (default:32)
+
+    iwt: int
+        Weighting option in ACER:
+          0: discrete variable
+          1: discrete weighted
+          2: continuous
+        (default: 2)
+
+    nbint: int
+        Number of outgoing energy points used in ACER (default=200)
+
+    
+    [1] https://www.nndc.bnl.gov/endfdocs/ENDF-102-2023.pdf
+    [2] https://github.com/NuclearData/ACEFormat/blob/master/ACEFormat.pdf
+    [3] https://github.com/njoy/NJOY2016 
+    [4] https://endf-parserpy.readthedocs.io/en/latest/
+    """
     import os
     import subprocess
     import shutil
@@ -103,7 +162,7 @@ def convert_endf_tsl_to_ace(endf_tsl, material_name=None, ace_name=None,
     92000: "92000 92234 92235 92238"}
 
     def create_dummy_endf_file(filename):
-        parser = endf_parserpy.EndfParser( print_cache_info=False,
+        parser = endf_parserpy.EndfParserPy( print_cache_info=False,
                                            cache_dir=False )
         endf_dict = endf_parserpy.EndfDict()
         endf_dict['1/451'] = {}
@@ -180,7 +239,7 @@ def convert_endf_tsl_to_ace(endf_tsl, material_name=None, ace_name=None,
             except OSError:
                 pass
 
-    parser = endf_parserpy.EndfParser(print_cache_info=False, cache_dir=False)
+    parser = endf_parserpy.EndfParserPy(print_cache_info=False, cache_dir=False)
     endf_dic = parser.parsefile(endf_tsl)
     temperatures = endf_dic[7][4]['teff0_table']['Tint']
     assert ( (len(suffix) == 3
@@ -236,28 +295,42 @@ def convert_endf_tsl_to_ace(endf_tsl, material_name=None, ace_name=None,
     material_name = endf_tsl if material_name is None else material_name
     txt=f"""reconr
 20 22 /
-'Dummy ENDF-6 tape' /
-10 0 /
-.01 /
-0/
-broadr
-20 22 23 /
-10 1 /
-0.01 /
-{temp} /
-0/
+'Dummy ENDF-6 tape with THERMR energy grid' /
+10 0 118 /
+{tol} {temp} /
+ 1.e-5 1.78e-5 2.5e-5 3.5e-5 5.0e-5 7.0e-5 1.e-4  
+ 1.26e-4 1.6e-4 2.0e-4 0.000253  0.000297  0.000350   
+ 0.00042  0.000506  0.000615  0.00075  0.00087   
+ 0.001012  0.00123  0.0015  0.0018  0.00203  0.002277   
+ 0.0026  0.003  0.0035  0.004048  0.0045  0.005   
+ 0.0056  0.006325  0.0072  0.0081  0.009108  0.01   
+ 0.01063  0.0115  0.012397  0.0133  0.01417  0.015   
+ 0.016192  0.0182  0.0199  0.020493  0.0215  0.0228   
+ 0.0253  0.028  0.030613  0.0338  0.0365  0.0395   
+ 0.042757  0.0465  0.050  0.056925  0.0625  0.069   
+ 0.075  0.081972  0.09  0.096  0.1035  0.111573   
+ 0.120  0.128  0.1355  0.145728  0.160  0.172   
+ 0.184437  0.20  0.2277  0.2510392  0.2705304   
+ 0.2907501  0.3011332  0.3206421  0.3576813  0.39   
+ 0.4170351  0.45  0.5032575  0.56  0.625   
+ 0.70  0.78  0.86  0.95  1.05  1.16  1.28   
+ 1.42  1.55  1.70  1.855  2.02  2.18   
+ 2.36  2.59  2.855  3.12  3.42  3.75   
+ 4.07  4.46  4.90  5.35  5.85  6.40   
+ 7.00  7.65  8.40  9.15  9.85  10.00 /
+ 0 /
 thermr
-31 23 41 /
-{endf_tsl_mat} 10 32 1 2 {icoh} 0 {natom} 237  0 /
+31 22 41 /
+{endf_tsl_mat} 10 {nbin} 1 2 {icoh} 0 {natom} 237  0 /
 {temp} /
-0.001 {emax} /
+{tol} {emax} /
 acer
 20 41 0 51 61 /
  2  1  1  {suffix} 0/
 ' {material_name} at {temp}K' /
  10 {temp} {ace_name} {no_zaids} /
  {zaids} /
- 237 200 {elas_mat} {ielas} 1 {emax} 2/
+ 237 {nbint} {elas_mat} {ielas} 1 {emax} {iwt}/
 stop
 """
     delete_tapes()
